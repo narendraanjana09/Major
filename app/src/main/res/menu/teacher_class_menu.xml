@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/share_class"
+        android:title="Share" />
+    <item android:id="@+id/take_attendance"
+        android:title="Take Attendance" />
+    <item android:id="@+id/view_attendance"
+        android:title="View Attendance" />
+    <item android:id="@+id/view_students"
+        android:title="View Students" />
+    <item android:id="@+id/open_meet"
+        android:title="Google Meet" />
+
+</menu>

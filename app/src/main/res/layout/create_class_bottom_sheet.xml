@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:background="@drawable/bottom_sheet_bg"
+        android:layout_height="match_parent"
+        >
+
+        <TextView
+            android:id="@+id/title"
+            android:text="Create Class"
+            android:textSize="@dimen/_16sdp"
+            android:textColor="@color/black"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_margin="@dimen/_15sdp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <LinearLayout
+            android:id="@+id/name_layout"
+            android:layout_width="match_parent"
+            app:layout_constraintTop_toBottomOf="@id/title"
+            android:layout_margin="@dimen/_25sdp"
+            android:orientation="vertical"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:text="Name*"
+                android:textSize="@dimen/_13sdp"
+                android:textColor="@color/white_light"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+            <EditText
+                android:id="@+id/name_ed"
+                android:hint="enter class name"
+                android:textSize="@dimen/_16sdp"
+                android:backgroundTint="@color/black"
+                android:textColor="@color/black"
+                android:inputType="textPersonName"
+                android:textColorHint="@color/white_light"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/des_layout"
+            android:layout_width="match_parent"
+            app:layout_constraintTop_toBottomOf="@id/name_layout"
+            android:layout_marginStart="@dimen/_25sdp"
+            android:layout_marginEnd="@dimen/_25sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:orientation="vertical"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:text="Description"
+                android:textSize="@dimen/_13sdp"
+                android:textColor="@color/white_light"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_marginTop="@dimen/_8sdp"
+                android:layout_height="wrap_content"
+                >
+                <EditText
+                    android:id="@+id/desc_ed"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:hint="enter description"
+                    android:textSize="@dimen/_14sdp"
+                    android:gravity="top|left"
+                    android:maxLength="150"
+                    android:minHeight="@dimen/_100sdp"
+                    android:maxLines="10"
+                    android:textColor="@color/black"
+                    android:inputType="textMultiLine"
+                    android:textColorHint="@color/white_light"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+                <TextView
+                    android:id="@+id/desc_text_count_tv"
+                    android:text="0/150"
+                    app:layout_constraintTop_toTopOf="@id/desc_ed"
+                    app:layout_constraintEnd_toEndOf="@id/desc_ed"
+                    android:layout_marginEnd="@dimen/_10sdp"
+                    android:textColor="@color/black"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </LinearLayout>
+        <Button
+            android:id="@+id/ok_btn"
+            android:text="Done"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/des_layout"
+            android:backgroundTint="@color/white_light"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_margin="@dimen/_20sdp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

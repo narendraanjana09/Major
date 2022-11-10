@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/home_nav"
+    app:startDestination="@id/homeTeacherFragment">
+
+    <fragment
+        android:id="@+id/homeStudentFragment"
+        android:name="com.nsa.major.home.frags.HomeStudentFragment"
+        android:label="HomeStudentFragment" >
+        <argument
+            android:name="classID"
+            app:argType="string"/>
+        <action
+            android:id="@+id/action_homeStudentFragment_to_studentClassFragment"
+            app:destination="@id/studentClassFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/homeTeacherFragment"
+        android:name="com.nsa.major.home.frags.HomeTeacherFragment"
+        android:label="HomeTeacherFragment" >
+        <action
+            android:id="@+id/action_homeTeacherFragment_to_homeStudentFragment"
+            app:destination="@id/homeStudentFragment"
+            app:popUpTo="@id/homeTeacherFragment"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_homeTeacherFragment_to_teacherClassFragment"
+            app:destination="@id/teacherClassFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/studentClassFragment"
+        android:name="com.nsa.major.home.frags.StudentClassFragment"
+        android:label="StudentClassFragment" >
+        <argument
+            android:name="classModel"
+            app:argType="com.nsa.major.home.models.ClassModel"/>
+        <action
+            android:id="@+id/action_studentClassFragment_to_studentsListFragment"
+            app:destination="@id/studentsListFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/teacherClassFragment"
+        android:name="com.nsa.major.home.frags.TeacherClassFragment"
+        android:label="TeacherClassFragment" >
+        <argument
+            android:name="classModel"
+            app:argType="com.nsa.major.home.models.ClassModel"/>
+        <action
+            android:id="@+id/action_teacherClassFragment_to_viewAttendanceFragment"
+            app:destination="@id/viewAttendanceFragment" />
+        <action
+            android:id="@+id/action_teacherClassFragment_to_studentsListFragment"
+            app:destination="@id/studentsListFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/viewAttendanceFragment"
+        android:name="com.nsa.major.home.frags.ViewAttendanceFragment"
+        android:label="ViewAttendanceFragment" >
+        <argument
+            android:name="classID"
+            app:argType="string"/>
+        <action
+            android:id="@+id/action_viewAttendanceFragment_to_studentsListFragment"
+            app:destination="@id/studentsListFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/studentsListFragment"
+        android:name="com.nsa.major.home.frags.StudentsListFragment"
+        android:label="StudentsListFragment" >
+        <argument
+            android:name="classID"
+            app:argType="string"/>
+        <argument
+            android:name="attendancesID"
+            app:argType="string"/>
+    </fragment>
+</navigation>

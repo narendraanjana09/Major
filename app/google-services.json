@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "132314971325",
+    "firebase_url": "https://major-51cb4-default-rtdb.asia-southeast1.firebasedatabase.app",
+    "project_id": "major-51cb4",
+    "storage_bucket": "major-51cb4.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:132314971325:android:8e359ba890dd072f870bd4",
+        "android_client_info": {
+          "package_name": "com.nsa.major"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "132314971325-it96c4o97178hvupjht82pmmtqne416o.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.nsa.major",
+            "certificate_hash": "35bbeb91441714baac70538428aadbdba670e45e"
+          }
+        },
+        {
+          "client_id": "132314971325-08ch3arucuu3a2fbimu679rgklfm7m8c.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDZ9tpFNld5aDVnLvrmwlS120UAP1a0IPA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "132314971325-08ch3arucuu3a2fbimu679rgklfm7m8c.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
